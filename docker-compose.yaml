@@ -107,7 +107,7 @@ services:
     container_name: jupyter_notebook
     networks:
       - backend
-    command: "start-notebook.sh --NotebookApp.token="
+    command: "jupyter lab --ip=0.0.0.0 --allow-root --NotebookApp.token='' --NotebookApp.password=''"
 
   app_fast_api:
     build: ./docker/fast_api
