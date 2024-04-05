@@ -1,12 +1,4 @@
-FROM python:3.10-slim
-
+FROM python:3.10-slim-buster
+# Install python packages
 COPY ./requirements.txt /tmp/requirements.txt
-
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    curl \
-    software-properties-common \
-    git \
-    && rm -rf /var/lib/apt/lists/*
-
 RUN pip install -r /tmp/requirements.txt
