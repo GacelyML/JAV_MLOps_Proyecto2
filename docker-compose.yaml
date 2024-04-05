@@ -74,6 +74,7 @@ services:
 
   tracking_server:
     restart: always
+    user: root
     build: ./docker/mlflow
     image: mlflow_server
     container_name: mlflow_server
@@ -100,6 +101,7 @@ services:
   
   jupyter:
     build: ./docker/jupyter
+    user: root
     volumes:
       - ./:/home/jovyan/work
     ports:
