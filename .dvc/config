@@ -1,0 +1,8 @@
+[core]
+    remote = minio_data
+['remote "data"']
+    url = gs://jav-mlops-proyecto2/data
+['remote "db_data"']
+    url = gs://jav-mlops-proyecto2/db_data
+['remote "minio_data"']
+    url = gs://jav-mlops-proyecto2/minio_data

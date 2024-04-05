@@ -1,0 +1,6 @@
+outs:
+- md5: de7e11d950db01d1c89d88734447b25f.dir
+  size: 19192
+  nfiles: 13
+  hash: md5
+  path: minio_data
