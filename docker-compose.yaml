@@ -123,13 +123,13 @@ services:
   app_streamlit:
     build: ./docker/streamlit
     ports:
-      - 8501:8501
+      - 8087:8087
     container_name: streamlit_app
     networks:
       - backend
     volumes:
       - ./src/front:/opt/code/
-    command: "streamlit run /opt/code/main.py --server.port=8501 --server.address=0.0.0.0 "
+    command: "streamlit run /opt/code/main.py --server.port=8087 --server.address=0.0.0.0 "
 
   postgres:
     image: postgres:13
