@@ -12,7 +12,7 @@ def fetch_data():
     response = requests.get(api_url)
     data = response.json()["data"]
 
-    with open(csv_file, "a") as csvfile:
+    with open(csv_file, "a", newline="") as csvfile:
         writer = csv.writer(csvfile)
         for row in data:
             writer.writerow(row)
