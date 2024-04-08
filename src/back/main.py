@@ -4,7 +4,7 @@ from sklearn.preprocessing import StandardScaler, OrdinalEncoder, StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 import os
-import mlflow
+# import mlflow
 from typing import List, Optional
 import pandas as pd
 
@@ -15,7 +15,7 @@ os.environ['AWS_ACCESS_KEY_ID'] = 'minio_user'
 os.environ['AWS_SECRET_ACCESS_KEY'] = 'minio_pwd'
 
 # connect to mlflow
-mlflow.set_tracking_uri("http://10.43.101.154:8083")
+# mlflow.set_tracking_uri("http://10.43.101.154:8083")
 
 model_name = "final_model"
 
@@ -49,7 +49,7 @@ def predict(item:model_input):
     # Load model as a PyFuncModel.
     try:
 
-        loaded_model = mlflow.pyfunc.load_model(model_uri=model_production_uri)
+       # loaded_model = mlflow.pyfunc.load_model(model_uri=model_production_uri)
 
         data_dict = item.dict()
         model_info = data_dict.pop('model', None)
