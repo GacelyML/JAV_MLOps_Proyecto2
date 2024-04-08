@@ -5,4 +5,4 @@ pandas==2.2.0
 scikit-learn==1.4.0
 typing_extensions==4.11.0
 pycaret==3.0.0
-mlflow-skinny
+mlflow==2.3.0
