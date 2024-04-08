@@ -5,7 +5,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 import os
 # import mlflow-skinny
-import mlflow
+# import mlflow
 from typing import List, Optional
 import pandas as pd
 
