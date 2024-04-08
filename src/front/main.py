@@ -67,7 +67,7 @@ if click or st.session_state.load_state:
         response = requests.post(url, data=datos)
 
         # Plotear resultado ( con retorno de posible error )
-        st.metric("resultado", value=response.text)
+        st.metric("resultado", value=response.json() )
     except Exception as e: 
         st.metric("Falla:", value=e)
 
