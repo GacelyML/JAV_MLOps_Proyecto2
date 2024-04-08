@@ -65,4 +65,4 @@ def predict(item:model_input):
 
         return prediction
     except Exception as e: 
-        return f"Ocurrió un error: {e["detail"]}"
+        return f"Ocurrió un error: {e['detail']}"
