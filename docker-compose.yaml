@@ -116,6 +116,8 @@ services:
     ports:
       - 8086:8086
     container_name: fast_api
+    depends_on:
+      - jupyter
     networks:
       - backend
     volumes:
