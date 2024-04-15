@@ -64,7 +64,7 @@ if click or st.session_state.load_state:
         # Request al API generado para calcular predicción sobre dato. 
         url = 'http://10.43.101.154:8086/predict/'
 
-        response = requests.post(url, data=datos)
+        response = requests.post(url, data=json_str)
 
         # Plotear resultado ( con retorno de posible error )
         st.metric("resultado", value=response.text )
